@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="thirsty.Components.Searchbar">
+
+
+    <VerticalStackLayout Spacing="5">
+
+        <!-- Barre de recherche -->
+        <Border 
+     StrokeThickness="0"
+     Background="White"
+     Margin="10,0"
+     HorizontalOptions="Fill"
+     StrokeShape="RoundRectangle 30">
+
+            <Grid ColumnDefinitions="Auto,*,Auto">
+
+                <!-- Bouton filtre -->
+                <Border 
+             Grid.Column="0"
+             BackgroundColor="White" 
+             StrokeThickness="0.5"
+             Stroke="LightGrey"
+             WidthRequest="35"
+             HeightRequest="35"
+             StrokeShape="RoundRectangle 50"
+             Margin="5">
+                    <Border.Shadow>
+                        <Shadow 
+                     Brush="Black"
+                     Offset="0,2"
+                     Radius="4"
+                     Opacity="0.15"/>
+                    </Border.Shadow>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Filtre_Clicked"/>
+                    </Border.GestureRecognizers>
+
+                    <Image 
+                 Source="icone_filtre.png"
+                 HeightRequest="20"
+                 WidthRequest="20"/>
+                </Border>
+
+                <!-- Barre de recherche -->
+                <Border 
+             Grid.Column="1"
+             StrokeThickness="0"
+             BackgroundColor="WhiteSmoke" 
+             HeightRequest="40"
+             StrokeShape="RoundRectangle 30"
+             Margin="0,5">
+
+                    <Entry
+                 Placeholder="Rechercher un bar..."
+                 TextColor="Black"
+                 VerticalTextAlignment="Center"
+                 BackgroundColor="Transparent"/>
+                </Border>
+
+                <!-- Bouton ajout -->
+                <Border 
+             Grid.Column="2"
+             BackgroundColor="White" 
+             StrokeThickness="0.5"
+             Stroke="LightGrey"
+             WidthRequest="35"
+             HeightRequest="35"
+             Margin="5">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="50"/>
+                    </Border.StrokeShape>
+                    <Border.Shadow>
+                        <Shadow 
+                     Brush="Black"
+                     Offset="0,2"
+                     Radius="4"
+                     Opacity="0.15"/>
+                    </Border.Shadow>
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Ajout_Clicked"/>
+                    </Border.GestureRecognizers>
+
+                    <Image 
+                 Source="icone_plus.png"
+                 HeightRequest="20"
+                 WidthRequest="20"/>
+                </Border>
+
+            </Grid>
+
+        </Border>
+
+        <!-- Mode afficage -->
+        <Border
+            StrokeShape="RoundRectangle 50"
+            Background="White"
+            StrokeThickness="0"
+            HorizontalOptions="Center">
+
+            <HorizontalStackLayout
+                Margin="5">
+
+                <!-- Mode Carte -->
+                <Border
+                    x:Name="borderBtnCarte"
+                    StrokeShape="RoundRectangle 50"
+                    Background="#db353a"
+                    StrokeThickness="0">
+                    <Button
+                        x:Name="btnCarte"
+                        Text="Carte"
+                        BackgroundColor="Transparent"
+                        BorderWidth="0"
+                        TextColor="White"
+                        Clicked="AfficherCarte_Clicked"/>
+                </Border>
+
+                <!-- Mode Liste -->
+                <Border
+                    x:Name="borderBtnListe"
+                    StrokeShape="RoundRectangle 50"
+                    Background="Transparent"
+                    StrokeThickness="0">
+                    <Button
+                        x:Name="btnListe"
+                        Text="Liste"
+                        BackgroundColor="Transparent"
+                        BorderWidth="0"
+                        TextColor="Grey"
+                        Clicked="AfficherListe_Clicked"/>
+                </Border>
+
+            </HorizontalStackLayout>
+        </Border>
+        
+    </VerticalStackLayout>
+   
+    
+</ContentView>

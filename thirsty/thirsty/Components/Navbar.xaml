@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="thirsty.Components.Navbar">
+
+    <!-- Border général -->
+    <Border 
+        StrokeThickness="0"
+        Background="White"
+        Margin="10,0,10,10"
+        HeightRequest="50"
+        VerticalOptions="End"
+        HorizontalOptions="Fill"
+        StrokeShape="RoundRectangle 30">
+      
+        <Grid ColumnDefinitions="*,*">
+            
+            <!-- Carte -->
+            <Border
+                Grid.Column="0"
+                StrokeThickness="0"
+                Background="Transparent">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnCarteClicked"/>
+                </Border.GestureRecognizers>
+
+                <!-- Border de selection -->
+                <Border
+                    x:Name="border_carte"
+                    StrokeThickness="0"
+                    Background="Transparent"
+                    WidthRequest="50"
+                    HeightRequest="45"
+                    HorizontalOptions="Center">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="18"/>
+                    </Border.StrokeShape>
+                    
+                    <VerticalStackLayout 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Spacing="1">
+                        
+                        <Image
+                            Source="icone_carte.png"
+                            WidthRequest="24"
+                            HeightRequest="24"
+                            Aspect="AspectFit">
+                        </Image>
+
+                        <Label
+                            x:Name="label_carte"
+                            Text="Carte"
+                            FontSize="11"
+                            HorizontalOptions="Center"
+                            TextColor="Grey"/>
+                    </VerticalStackLayout>
+                </Border>
+            </Border>
+
+            <!-- Meet -->
+            <Border
+                Grid.Column="1"
+                StrokeThickness="0"
+                Background="Transparent">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnMeetClicked"/>
+                </Border.GestureRecognizers>
+                
+                <!-- Border de selection -->
+                <Border
+                    x:Name="border_meet"
+                    StrokeThickness="0"
+                    Background="Transparent"
+                    WidthRequest="50"
+                    HeightRequest="45"
+                    HorizontalOptions="Center">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="18"/>
+                    </Border.StrokeShape>
+
+                    <VerticalStackLayout 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Spacing="1">
+
+                        <Image
+                            Source="icone_meet.png"
+                            WidthRequest="24"
+                            HeightRequest="24"
+                            Aspect="AspectFit">
+                        </Image>
+
+                        <Label
+                            x:Name="label_meet"
+                            Text="Meet"
+                            FontSize="11"
+                            HorizontalOptions="Center"
+                            TextColor="Grey"/>
+                    </VerticalStackLayout>
+                </Border>
+            </Border>
+            
+        </Grid>
+    </Border>
+
+</ContentView>
