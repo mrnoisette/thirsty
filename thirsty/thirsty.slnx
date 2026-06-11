@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="../thirsty_api/thirsty_api.csproj" Id="216d7af5-e27b-4196-ba2d-242ec66df2bb" />
+  <Project Path="../thirsty_shared/thirsty_shared.csproj" Id="91915e90-fa52-47c5-b5ca-ef5a50b39857" />
   <Project Path="thirsty/thirsty.csproj" />
 </Solution>

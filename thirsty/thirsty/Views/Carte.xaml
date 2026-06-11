@@ -8,7 +8,11 @@
 
     <Grid>
 
-        <mapsui:MapControl x:Name="map"/>
+        <mapsui:MapView 
+            x:Name="map"
+            IsZoomButtonVisible="False"
+            IsMyLocationButtonVisible="False"
+            IsNorthingButtonVisible="False"/>
         
     </Grid>
 

@@ -74,6 +74,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\..\thirsty_shared\thirsty_shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Update="MainLayout.xaml.cs">
 	    <DependentUpon>MainLayout.xaml</DependentUpon>
 	  </Compile>
@@ -84,6 +88,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Components\AjoutBar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Components\DetailBar.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Components\FiltreBar.xaml">
